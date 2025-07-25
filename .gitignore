@@ -1,2 +1,7 @@
-venv/
-node_modules/
+# frontend
+/frontend/node_modules
+/frontend/package-lock.json
+
+# backend
+/backend/venv
+/backend/__pycache__/
