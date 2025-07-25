@@ -3,6 +3,6 @@
     "@vitejs/plugin-react": "^4.7.0"
   },
   "dependencies": {
-    "react-flow-renderer": "^10.3.17"
+    "reactflow": "^11.11.4"
   }
 }
