@@ -1,20 +1,29 @@
-import ReactFlow, { Background, Controls, MiniMap } from 'react-flow-renderer'
+import ReactFlow, {
+  Background,
+  Controls,
+  MiniMap,
+} from 'reactflow';
+import 'reactflow/dist/style.css';
 
-const initialNodes = []
-const initialEdges = []
+const initialNodes = [
+  {
+    id: '1',
+    type: 'default',
+    position: { x: 100, y: 100 },
+    data: { label: 'Node 1' },
+  },
+];
 
-function FlowEditor() {
+const initialEdges = [];
+
+export default function FlowEditor() {
   return (
-    <ReactFlow
-      nodes={initialNodes}
-      edges={initialEdges}
-      fitView
-    >
-      <MiniMap />
-      <Controls />
-      <Background />
-    </ReactFlow>
-  )
+    <div style={{ height: '100vh' }}>
+      <ReactFlow nodes={initialNodes} edges={initialEdges} fitView>
+        <MiniMap />
+        <Controls />
+        <Background />
+      </ReactFlow>
+    </div>
+  );
 }
-
-export default FlowEditor
