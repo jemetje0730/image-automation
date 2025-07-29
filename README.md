@@ -22,11 +22,30 @@ Also, enhanced with a **frontend UI** for scenario management, monitoring, and c
 ```
 image_automation/
 ├── backend/
+│   │
 │   ├── action/                     # Handles input actions like mouse/keyboard
 │   │   └── __init__.py
 │   │
 │   ├── api/                     
-│   │   └── __init__.py
+│   │   ├── __init__.py
+│   │   ├── assets.py
+│   │   ├── router.py
+│   │   ├── runner.py
+│   │   └── scenarios.py
+│   │
+│   ├── assets/                     # Image templates used for matching
+│   │
+│   ├── config/                     
+│   │   └── settings.py
+│   │
+│   ├── project_config/                     
+│   │   └── config.yaml
+│   │
+│   ├── services/                     
+│   │   ├── __init__.py
+│   │   ├── file_utils.py
+│   │   ├── runner_service.py
+│   │   └── scenario_service.py 
 │   │
 │   ├── detector/                   # Logic for detecting images on screen
 │   │   └── __init__.py
@@ -36,19 +55,35 @@ image_automation/
 │   │
 │   ├── db/                         # Database connections
 │   │   └── __init__.py
+│   │   ├── db_loader.py
+│   │   └── db_setup.py
 │   │
 │   ├── utils/                      # Utility helper functions
 │   │   └── __init__.py
+│   │   ├── app_log.py
+│   │   └── log_clean.py
 │   │
-│   ├── config/                     # Global config settings
-│   │   └── config.yaml
+│   ├── requirements.txt 
 │   │
-│   ├── assets/                     # Image templates used for matching
-│   │
-│   │
-│   ├── main.py                     # Flask app entry point
+│   └── app.py                     # Flask app entry point
 │
-├── frontend/                       
+├── frontend/        
+│   │
+│   ├── src/                  
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.tsx
+│   │   └── Main.tsx
+│   │
+│   ├── index.html
+│   │
+│   ├── package.json
+│   │
+│   ├── vite.config.ts
+│   │
+│   └── App.tsx                 
+│
+├── .gitignore
 │
 └── README.md
 ```
